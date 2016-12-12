@@ -1,5 +1,5 @@
 #include "sort.h"
-#include "asc.h"
+#include "desc.h"
 #include <stdlib.h>
 
 void sort(int *array,int count)
