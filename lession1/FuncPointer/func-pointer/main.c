@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include "sort.h"
-#include "desc.h"
+#include "asc.h"
 #include <stdio.h>
 
 void display(int *,int len);
@@ -8,7 +8,7 @@ extern int (*comparer)(int,int);
 
 int main(void)
 {
-  comparer = desc;
+  comparer = asc;
   int array[10] = {5,8,3,9,1,7,4,2,0,6};
   int len = 10;
   sort(array,len);

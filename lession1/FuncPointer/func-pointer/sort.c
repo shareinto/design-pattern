@@ -3,12 +3,12 @@
 
 extern int (*comparer)(int,int);
 
-void sort(int *array,int count)
+void sort(int *array,int len)
 {
   int i,j;
-  for(i = 0;i<count;i++)
+  for(i = 0;i<len;i++)
   {
-    for(j = count - 1;j > i;j --)
+    for(j = len - 1;j > i;j --)
     {
       int a = array[j];
       int b = array[j - 1];
