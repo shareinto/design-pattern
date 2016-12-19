@@ -8,6 +8,6 @@ public class Program {
     public static void main(String[] args) {
         int[] array = {5, 7, 2, 1, 8, 0, 6, 3, 4, 9};
         IntArraySearcher searcher = new IntArraySearcher();
-        System.out.println(searcher.contains(array, 10));
+        System.out.println(searcher.contains(array, 0));
     }
 }
