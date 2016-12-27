@@ -1,0 +1,17 @@
+<html>
+<body>
+
+<script type="text/javascript" src="Queue.js" ></script>
+
+<script type="text/javascript">
+   var queue = new Queue();
+   for(var i = 0;i < 10;i ++){
+       queue.enqueue(i);
+   }
+   var item;
+   while((item  = queue.dequeue()) != null){
+       console.log(item); 
+   }
+</script>
+</body>
+</html>

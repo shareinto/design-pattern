@@ -3,7 +3,7 @@
  */
 public class IntArraySearcher {
     public boolean contains(int[] array, int element) {
-        BubbleSorter sorter = new BubbleSorter();
+        QuickSorter sorter = new QuickSorter();
         sorter.sort(array);
         return binarySearch(array,element) > -1;
     }

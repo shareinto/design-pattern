@@ -9,12 +9,13 @@ public class Program {
                 .registView("smallRectangle", new Rectangle(1, 1))
                 .registView("bigRectangle", new Rectangle(10, 10));
 
-        toolBar.getView("smallCircle").draw();
+        FlyWeightFactory factory = new ColorFlyWeightFactory();
+        factory.show(toolBar.getView("smallCircle"), "red");
 
-        Circle circle = ((Circle)toolBar.getView("smallCircle"));
-        circle.setRadius(5);
-        circle.draw();
+        factory = new TransparentFlyWeightFactory();
+        factory.show(toolBar.getView("bigRectangle"), "transparent");
 
-        toolBar.getView("smallCircle").draw();
+        factory = new ColorTransparentFlyWeightFactory();
+        factory.show(toolBar.getView("bigCircle"), "green,untransparent");
     }
 }

@@ -10,16 +10,6 @@ function ToolBar() {
         if(!map[id]){
             console.error("view " + id +" has not been regist");
         }
-        var myArray = new Array();
-        var a = {};
-        a.__proto__ = myArray;
         return Object.create(map[id]);
     };
-    var func = function () { }
-    func.prototype = new Array();
-}
-
-var Object = function()
-{
-
 }

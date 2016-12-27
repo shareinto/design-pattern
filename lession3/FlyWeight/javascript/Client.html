@@ -1,9 +1,11 @@
 <html>
 <body>
 
+<script type="text/javascript" src="Color.js" ></script>
 <script type="text/javascript" src="Circle.js"></script>
 <script type="text/javascript" src="Rectangle.js"></script>
 <script type="text/javascript" src="ToolBar.js" ></script>
+<script type="text/javascript" src="ColorFactory.js" ></script>
 
 <script type="text/javascript">
 var toolbar = new ToolBar();
@@ -13,13 +15,8 @@ toolbar.registView("bigCircle",new Circle(10));
 toolbar.registView("smallRectangle",new Rectangle(1,1));
 toolbar.registView("bigRectangle",new Rectangle(10,10));
 
-toolbar.getView("smallCircle").draw();
-
 var smallCircle = toolbar.getView("smallCircle");
-smallCircle.radius = 5;
-smallCircle.draw();
-
-toolbar.getView("smallCircle").draw();
+smallCircle.color = ColorFactory.getColor("red").draw(smallCircle);
 </script>
 </body>
 </html>
