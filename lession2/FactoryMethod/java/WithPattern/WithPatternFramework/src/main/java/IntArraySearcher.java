@@ -1,8 +1,13 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+
 /**
  * Created by Administrator on 2016/12/18.
  */
 public abstract class IntArraySearcher {
     public boolean contains(int[] array,int element) {
+
+
         Sorter sorter = factoryMethod();
         sorter.sort(array);
         return binarySearch(array,element) > -1;
