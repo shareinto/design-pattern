@@ -16,7 +16,7 @@ public:
 };
 class Derive : public Base {
 public:
-	virtual void f1() { cout << "Derive::f" << endl; }
+	virtual void f1() { cout << "Derive::f1" << endl; }
 	virtual void g1() { cout << "Derive::g1" << endl; }
 	virtual void h1() { cout << "Derive::g1" << endl; }
 };
@@ -59,8 +59,17 @@ void CallDerive()
 
 int main()
 {
-	CallBase();
+	/*CallBase();
 	CallDerive();
+	int a = 0;
+	cin >> a;*/
+
+	void(*func)(void) = NULL;
+
+	int a = 0;
+
+	func = (void(*)(void))a;
+
     return 0;
 }
 
