@@ -6,4 +6,9 @@ public class Supervisor extends Handler {
     public boolean canHandle(Mobile mobile) {
         return mobile.getType().equals("Budget");
     }
+
+    @Override
+    public void handleRequest(Mobile mobile) {
+
+    }
 }
